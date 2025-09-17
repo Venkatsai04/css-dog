@@ -1,4 +1,4 @@
-# CSS Shiba Inu Dog 🐕
+# CSS Shiba Inu Dog 🐶
 
 A fun little project where I coded a Shiba Inu dog entirely in **HTML + CSS** – no images, no JS, just styles and creativity!  
 Built as a playful experiment to showcase how powerful and underrated CSS really is.
