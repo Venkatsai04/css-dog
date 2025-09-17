@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shiba Inu Dog</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .dog {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+
+      
+        .head {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #ff9d3d 0%, #ff8c1a 100%);
+            border-radius: 55px;
+            position: relative;
+            border: 4px solid #8b4513;
+            box-sizing: border-box;
+        }
+
+
+        .face {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 55px;
+            background: linear-gradient(180deg, #fff8dc 0%, #f5e6b8 100%);
+            border-radius: 40px 40px 30px 30px;
+            border: 3px solid #8b4513;
+            border-top: none;
+            box-sizing: border-box;
+        }
+
+
+        .ear {
+            position: absolute;
+            width: 35px;
+            height: 45px;
+            background: linear-gradient(135deg, #ff9d3d 0%, #ff8c1a 100%);
+            border-radius: 20px 20px 5px 5px;
+            border: 3px solid #8b4513;
+            box-sizing: border-box;
+        }
+
+        .ear.left {
+            top: -20px;
+            left: 10px;
+            transform: rotate(-20deg);
+        }
+
+        .ear.right {
+            top: -20px;
+            right: 10px;
+            transform: rotate(20deg);
+        }
+
+
+        .ear::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 25px;
+            background: linear-gradient(180deg, #fff8dc 0%, #f5e6b8 100%);
+            border-radius: 10px 10px 3px 3px;
+        }
+
+
+        .eye {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: black;
+            border-radius: 50%;
+            transform-origin: center;
+            top: 38px;
+            animation: blink 3s ease-in-out infinite;
+        }
+        
+        .eye.left {
+            left: 30px;
+        }
+        
+        .eye.right {
+            right: 30px;
+        }
+        
+
+        .eye::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: blinkIris 3s ease-in-out infinite;
+        }
+
+
+        @keyframes blink {
+
+            0%,
+            90% {
+                height: 12px;
+                border-radius: 50%;
+            }
+
+            95%,
+            100% {
+                height: 2px;
+                border-radius: 10px;
+            }
+        }
+
+        @keyframes blinkIris {
+
+            0%,
+            90% {
+                height: 4px;
+                border-radius: 50%;
+            }
+
+            95%,
+            100% {
+                height: .5px;
+                border-radius: 10px;
+            }
+        }
+
+
+        .nose {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 6px;
+            background: black;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+
+        .mouth {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 10px;
+            border: 2px solid #8b4513;
+            border-top: none;
+            border-radius: 0 0 20px 20px;
+            background: transparent;
+        }
+
+
+        .tongue {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 8px;
+            background: #ff6b9d;
+            border-radius: 0 0 10px 10px;
+            border: 2px solid #d6336c;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dog">
+        <div class="head">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="face">
+                <div class="nose"></div>
+                <div class="mouth"></div>
+                <div class="tongue"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
